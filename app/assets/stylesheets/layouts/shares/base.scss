@@ -1,0 +1,14 @@
+@import "variables";
+
+body {
+  background-color: $bg-colour;
+  color: $base-font-colour;
+  font-size: $base-font-size;
+  line-height: 1.85em;
+}
+
+.main-container {
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
+}
