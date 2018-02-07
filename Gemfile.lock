@@ -41,6 +41,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_admin-sortable_tree (2.0.0)
+      activeadmin (>= 1.1)
+      coffee-rails
+      jquery-rails
+      sass (~> 3.1)
     activejob (5.0.6)
       activesupport (= 5.0.6)
       globalid (>= 0.3.6)
@@ -230,6 +235,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin-sortable_tree (~> 2.0.0)
   activeadmin!
   byebug
   coffee-rails (~> 4.2)

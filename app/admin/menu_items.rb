@@ -1,6 +1,14 @@
 ActiveAdmin.register MenuItem do
   permit_params :name, :description, :price, :tag
 
+  sortable tree: false,
+    sorting_attribute: :tag
+
+  index :as => :sortable do
+    label :name # item content
+    actions
+  end
+
   show do |t|
   		attributes_table do
   			row :name
