@@ -1,5 +1,5 @@
 ActiveAdmin.register Section do
-  permit_params :name, :subtitle, :description, :page_type
+  permit_params :name, :subtitle, :description, :page_type_id
 
   show do |t|
   		attributes_table do
