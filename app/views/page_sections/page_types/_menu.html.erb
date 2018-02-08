@@ -1,5 +1,9 @@
 <div class="menu-container">
   <% if section.image.present? %>
     <%= render "/page_sections/page_types/section_with_image", section: section %>
+  <% else %>
+    <div class="content-container">
+      <%= section.description %>
+    </div>
   <% end %>
 </div>
