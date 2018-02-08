@@ -1,4 +1,4 @@
-class SectionsController < ActionController::Base
+class PageSectionsController < ActionController::Base
   layout "application"
 
   def index

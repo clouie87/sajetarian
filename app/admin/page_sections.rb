@@ -1,4 +1,4 @@
-ActiveAdmin.register Section do
+ActiveAdmin.register PageSection do
   permit_params :name, :subtitle, :description, :tag, :page_type_id, :image
 
   sortable tree: false,
@@ -16,6 +16,9 @@ ActiveAdmin.register Section do
 			row :description
 			row :tag
 			row :page_type
+      row :image do
+				page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'No Image Yet')
+			end
 		end
 	end
 
@@ -26,7 +29,7 @@ ActiveAdmin.register Section do
 			f.input :description
       f.input :tag
 			f.input :page_type
-      f.input :image
+      f.input :image, hint: f.page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'Upload and image here')
 		end
 		f.actions
 	end

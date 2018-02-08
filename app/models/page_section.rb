@@ -1,4 +1,4 @@
-class Section < ApplicationRecord
+class PageSection < ApplicationRecord
   belongs_to :page_type
 
   has_attached_file :image, :styles => { :medium => "680x300>", :thumb => "170x75>" }

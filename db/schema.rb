@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207062036) do
+ActiveRecord::Schema.define(version: 20180208023209) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -52,13 +52,7 @@ ActiveRecord::Schema.define(version: 20180207062036) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "page_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "page_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "subtitle"
     t.text     "description",        limit: 65535
@@ -70,8 +64,14 @@ ActiveRecord::Schema.define(version: 20180207062036) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.index ["page_type_id"], name: "index_sections_on_page_type_id", using: :btree
+    t.index ["page_type_id"], name: "index_page_sections_on_page_type_id", using: :btree
   end
 
-  add_foreign_key "sections", "page_types"
+  create_table "page_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "page_sections", "page_types"
 end
