@@ -1,0 +1,35 @@
+@import "image_layout";
+
+.page-section {
+  padding: $base-padding;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: $base-padding;
+
+  .title {
+    display: unset;
+    font-weight: lighter;
+    padding: 0 50px;
+    position: relative;
+
+    &:before,
+    &::after {
+      background-color: $brand-accent-color;
+      content: '';
+      height: 1px;
+      position: absolute;
+      top: .6em;
+      width: 35px;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+}
