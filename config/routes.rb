@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get 'sections/index'
-  root 'sections#index'
+  get 'page_sections/index'
+  root 'page_sections#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
