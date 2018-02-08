@@ -1,5 +1,5 @@
 ActiveAdmin.register PageSection do
-  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image
+  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout
 
   sortable tree: false,
     sorting_attribute: :tag
@@ -15,6 +15,7 @@ ActiveAdmin.register PageSection do
 			row :subtitle
 			row :description
 			row :tag
+			row :image_layout
 			row :page_type
       row :image do
 				page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'No Image Yet')
@@ -28,7 +29,8 @@ ActiveAdmin.register PageSection do
 			f.input :subtitle
 			f.input :description
       f.input :tag
-			f.input :page_type
+      f.input :image_layout, as: :select, collection: PageSection.image_layouts.map {|layout| [layout.humanize, layout] }, include_blank: false
+			f.input :page_type, include_blank: false
       f.input :image, hint: f.page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'Upload and image here')
 		end
 		f.actions
