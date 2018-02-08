@@ -1,5 +1,5 @@
 <div class="default-container">
   <% if section.image.present? %>
-    <%= image_tag section.image %>
+    <%= render "/page_sections/page_types/section_with_image", section: section %>
   <% end %>
 </div>
