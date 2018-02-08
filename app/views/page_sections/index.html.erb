@@ -1,7 +1,4 @@
 <% @sections.each do |section| %>
-  <%= section.name %>
-  <% if section.image %>
-    <%= image_tag section.image %>
-
-  <% end %>
+  <h3 class="page-title"><%= section.name %></h3>
+  <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
 <% end %>
