@@ -1,3 +1,7 @@
 <% @sections.each do |section| %>
   <%= section.name %>
+  <% if section.image %>
+    <%= image_tag section.image %>
+
+  <% end %>
 <% end %>

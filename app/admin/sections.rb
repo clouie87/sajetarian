@@ -1,5 +1,5 @@
 ActiveAdmin.register Section do
-  permit_params :name, :subtitle, :description, :tag, :page_type_id
+  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image
 
   sortable tree: false,
     sorting_attribute: :tag
@@ -26,6 +26,7 @@ ActiveAdmin.register Section do
 			f.input :description
       f.input :tag
 			f.input :page_type
+      f.input :image
 		end
 		f.actions
 	end
