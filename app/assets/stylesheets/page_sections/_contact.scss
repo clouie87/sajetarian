@@ -1,0 +1,32 @@
+@import "variables";
+
+.contact-container {
+  .social {
+    text-align: center;
+  }
+
+  .social-connect {
+    padding: 0 $base-padding;
+    text-decoration: none;
+  }
+
+  .twitter {
+    color: $twitter-blue;
+  }
+
+  .instagram {
+    color: #acbbff;
+  }
+
+  .facebook {
+    color: $facebook-blue;
+  }
+
+  .active {
+    color: $brand-accent-color;
+  }
+
+  .btn {
+    background-color: $brand-accent-color;
+  }
+}
