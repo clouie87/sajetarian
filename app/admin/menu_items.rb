@@ -18,13 +18,13 @@ ActiveAdmin.register MenuItem do
   		end
   	end
 
-  	form :html => { :enctype => "multipart/form-data" } do |f|
-  		f.inputs do
-  			f.input :name
-  			f.input :description
-  			f.input :price
-  			f.input :tag
-  		end
-  		f.actions
-  	end
+	form :html => { :enctype => "multipart/form-data" } do |f|
+		f.inputs do
+			f.input :name
+			f.input :description
+			f.input :price
+			f.input :tag
+		end
+		f.actions
+	end
 end

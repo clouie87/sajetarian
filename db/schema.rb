@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208041633) do
+ActiveRecord::Schema.define(version: 20180209053942) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20180208041633) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "name"
+    t.string  "email_address"
+    t.string  "phone_number"
+    t.string  "address"
+    t.string  "city"
+    t.boolean "primary_contact", default: false, null: false
+  end
+
   create_table "menu_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
@@ -65,6 +74,7 @@ ActiveRecord::Schema.define(version: 20180208041633) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image_layout"
+    t.integer  "contact_id"
     t.index ["page_type_id"], name: "index_page_sections_on_page_type_id", using: :btree
   end
 
