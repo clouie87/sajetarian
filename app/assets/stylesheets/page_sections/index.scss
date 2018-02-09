@@ -1,6 +1,5 @@
-@import "image_layout";
-
 .page-section {
+  @include outer-container;
   padding: $base-padding;
 }
 

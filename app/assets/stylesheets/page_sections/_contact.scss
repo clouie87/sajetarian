@@ -1,5 +1,3 @@
-@import "variables";
-
 .contact-container {
   .social {
     text-align: center;
@@ -15,7 +13,7 @@
   }
 
   .instagram {
-    color: #acbbff;
+    color: $instagram-purple;
   }
 
   .facebook {
@@ -29,4 +27,9 @@
   .btn {
     background-color: $brand-accent-color;
   }
+}
+
+.contact-form {
+  @include span-columns(8);
+
 }
