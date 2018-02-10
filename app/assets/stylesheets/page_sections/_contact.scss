@@ -25,6 +25,11 @@
   }
 }
 
+.contact-content {
+  @include span-columns(6);
+  padding: $base-padding;
+}
+
 .contact-form {
   @include span-columns(6);
   position: relative;
