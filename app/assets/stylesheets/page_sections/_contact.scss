@@ -20,16 +20,35 @@
     color: $facebook-blue;
   }
 
-  .active {
-    color: $brand-accent-color;
-  }
-
   .btn {
     background-color: $brand-accent-color;
   }
 }
 
 .contact-form {
-  @include span-columns(8);
+  @include span-columns(6);
+  position: relative;
 
+  .input-field {
+    padding: $base-padding 0;
+    position: relative;
+
+    i {
+      color: $disabled-grey;
+      font-size: 30px;
+      left: 0;
+      top: $base-padding;
+      position: absolute;
+    }
+
+    textarea,
+    input[type=email],
+    input[type=text] {
+      @include form-input;
+    }
+  }
+
+  input[type=submit] {
+    @include submit-button;
+  }
 }
