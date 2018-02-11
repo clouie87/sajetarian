@@ -1,0 +1,14 @@
+.map-container {
+  .map-content {
+    @include span-columns(4);
+  }
+
+  .map-section {
+    @include span-columns(8);
+
+    #google-map {
+      height: 400px;
+      width: 100%;
+    }
+  }
+}

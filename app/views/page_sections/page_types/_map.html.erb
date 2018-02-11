@@ -1,0 +1,21 @@
+<div class="page-section map-container">
+
+  <div class="section-title">
+    <h2 class="title"><%= section.name %></h2>
+  </div>
+
+  <div class="map-content">
+    <% todays_events.each do |event| %>
+      <p><strong>Where: </strong><%= event.address %></p>
+      <p><strong>When: </strong><%= event.start_time %> - <%= event.end_time %></p>
+    <% end %>
+  </div>
+
+  <div class="map-section">
+    <div id="google-map">
+    </div>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEEyD0e0BR_2VR9AEp0EN1h0Zf9xZVXyY&callback=initMap">
+    </script>
+  </div>
+</div>

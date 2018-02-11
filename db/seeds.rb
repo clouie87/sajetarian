@@ -10,3 +10,4 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
 PageType.create(name: "Default")
 PageType.create(name: "Menu")
 PageType.create(name: "Contact")
+PageType.create(name: "Map")
