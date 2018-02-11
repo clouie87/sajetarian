@@ -4,18 +4,19 @@
     <div class="nav-overlay"></div>
 
     <div class="nav-wrapper">
-      <li class="brand-logo"><%= link_to "Sajetarian", root_path %></li>
-
-      <ul class="right nav-items">
-        <% if pages.present? %>
-          <% pages.each do |section| %>
-            <% anchor = to_snakecase(section.name) %>
-            <li data-behaviour = "scroll-button" data-target = "<%= anchor %>" class = "nav-button" >
-              <%= section.name %>
-            </li>
+      <div class="nav-content">
+        <li class="brand-logo"><%= link_to "Sajetarian", root_path %></li>
+        <ul class="right nav-items">
+          <% if pages.present? %>
+            <% pages.each do |section| %>
+              <% anchor = to_snakecase(section.name) %>
+              <li data-behaviour = "scroll-button" data-target = "<%= anchor %>" class = "nav-button" >
+                <%= section.name %>
+              </li>
+            <% end %>
           <% end %>
-        <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
