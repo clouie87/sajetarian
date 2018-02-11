@@ -1,5 +1,5 @@
 ActiveAdmin.register PageSection do
-  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout
+  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id
 
   sortable tree: false,
     sorting_attribute: :tag

@@ -1,10 +1,8 @@
 <div class="page-section map-container">
-
-  <div class="section-title">
-    <h2 class="title"><%= section.name %></h2>
-  </div>
-
   <div class="map-content">
+    <div class="section-title">
+      <h2 class="title"><%= section.name %></h2>
+    </div>
     <% todays_events.each do |event| %>
       <p><strong>Where: </strong><%= event.address %></p>
       <p><strong>When: </strong><%= event.start_time %> - <%= event.end_time %></p>
