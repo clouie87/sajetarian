@@ -1,55 +1,73 @@
 .contact-container {
-  .social {
-    text-align: center;
+  .contact-content {
+    @include span-columns(6);
+    padding: $base-padding;
+
+    .contact-info-wrapper {
+      @include span-columns(10);
+      float: none;
+      margin: 0 auto;
+
+      .contact-info {
+        margin: 0 10px;
+      }
+    }
+
+    .social-button-wrapper {
+      @include span-columns(12);
+
+      .section-title {
+        padding: $base-padding 0;
+      }
+
+      .social {
+        text-align: center;
+      }
+
+      .social-connect {
+        padding: 0 $base-padding;
+        text-decoration: none;
+      }
+
+      .twitter {
+        color: $twitter-blue;
+      }
+
+      .instagram {
+        color: $instagram-purple;
+      }
+
+      .facebook {
+        color: $facebook-blue;
+      }
+    }
   }
 
-  .social-connect {
-    padding: 0 $base-padding;
-    text-decoration: none;
-  }
-
-  .twitter {
-    color: $twitter-blue;
-  }
-
-  .instagram {
-    color: $instagram-purple;
-  }
-
-  .facebook {
-    color: $facebook-blue;
-  }
-}
-
-.contact-content {
-  @include span-columns(6);
-  padding: $base-padding;
-}
-
-.contact-form {
-  @include span-columns(6);
-  position: relative;
-
-  .input-field {
-    padding: $base-padding 0;
+  .contact-form {
+    @include span-columns(6);
     position: relative;
 
-    i {
-      color: $disabled-grey;
-      font-size: 30px;
-      left: 0;
-      top: $base-padding;
-      position: absolute;
+    .input-field {
+      padding: $base-padding 0;
+      position: relative;
+
+      i {
+        color: $disabled-grey;
+        font-size: 30px;
+        left: 0;
+        top: $base-padding;
+        position: absolute;
+      }
+
+      textarea,
+      input[type=email],
+      input[type=text] {
+        @include form-input;
+      }
     }
 
-    textarea,
-    input[type=email],
-    input[type=text] {
-      @include form-input;
+    input[type=submit] {
+      @include submit-button;
     }
-  }
-
-  input[type=submit] {
-    @include submit-button;
   }
 }
