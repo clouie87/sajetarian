@@ -24,6 +24,7 @@ gem 'activeadmin', github: 'activeadmin'
 
 # admin sorting
 gem "active_admin-sortable_tree", "~> 2.0.0"
+gem 'ancestry'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

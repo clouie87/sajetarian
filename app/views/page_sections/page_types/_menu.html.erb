@@ -2,5 +2,17 @@
   <%= render 'title', section: section %>
   <%= section.description %>
 
-  <!--  then loop through the menu items -->
+  <% menu_item_categories.each do |category| %>
+    <div class="menu-items">
+      <h4 class="category-name"><%= category.name %></h4>
+
+      <% category.children.each do |item| %>
+        <div class="menu-item">
+          <p class="name"><%= item.name %></p>
+          <p class="price"><%= number_to_currency(item.price) %></p>
+          <p class="note"><%= item.description %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>

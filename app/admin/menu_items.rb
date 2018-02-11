@@ -1,7 +1,7 @@
 ActiveAdmin.register MenuItem do
   permit_params :name, :description, :price, :tag
 
-  sortable tree: false,
+  sortable tree: true,
     sorting_attribute: :tag
 
   index :as => :sortable do

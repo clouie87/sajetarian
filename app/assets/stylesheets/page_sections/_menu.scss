@@ -1,0 +1,31 @@
+.menu-items {
+  @include span-columns(6);
+
+  .category-name {
+    text-align: center;
+    font-weight: 300
+  }
+
+  .menu-item {
+    margin: auto $base-padding;
+    position: relative;
+
+    .name,
+    .price {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .price {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .note {
+      font-size: 14px;
+      color: grey;
+    }
+  }
+
+}
