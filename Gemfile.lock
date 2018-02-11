@@ -15,6 +15,12 @@ GIT
       sprockets (>= 3.0, < 4.1)
       sprockets-es6 (>= 0.9.2)
 
+GIT
+  remote: git://github.com/alexreisner/geocoder.git
+  revision: cf37a716530fb7e7dba5546f64e08ed867442263
+  specs:
+    geocoder (1.4.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -260,6 +266,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  geocoder!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

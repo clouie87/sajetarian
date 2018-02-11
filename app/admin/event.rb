@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
-  permit_params :starts_at, :ends_at, :address, :city
+  permit_params :starts_at, :ends_at, :address, :city, :latitude, :longitude, :full_street_address
 
   show do |t|
   		attributes_table do

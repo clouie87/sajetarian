@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem "paperclip", "~> 5.2.1"
 
+# Google APIs
+gem 'geocoder', github: 'alexreisner/geocoder'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
