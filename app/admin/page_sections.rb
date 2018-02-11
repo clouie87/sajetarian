@@ -31,7 +31,7 @@ ActiveAdmin.register PageSection do
       f.input :tag
       f.input :image_layout, as: :select, collection: PageSection.image_layouts.map {|layout| [layout.humanize, layout] }, include_blank: false
 			f.input :page_type, include_blank: false
-      if page_section.page_type.name == "Contact"
+      if page_section.page_type.present? && page_section.page_type.name == "Contact"
         f.input :contact, include_blank: false
       end
       f.input :image, hint: f.page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'Upload and image here')
