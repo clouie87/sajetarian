@@ -1,5 +1,7 @@
-<div class="page-section default-container">
-  <% if section.image.present? %>
-    <%= render "/page_sections/page_types/section_with_image", section: section %>
-  <% end %>
+
+<div class="content-container">
+  <%= render 'title', section: section %>
+  <%= section.description %>
+
+  <!--  then loop through the menu items -->
 </div>

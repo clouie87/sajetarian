@@ -3,10 +3,5 @@
     <%= image_tag section.image %>
   </div>
 
-  <div class="content-container">
-    <div class="section-title">
-      <h2 class="title"><%= section.name %></h2>
-    </div>
-    <%= section.description %>
-  </div>
+  <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
 </div>

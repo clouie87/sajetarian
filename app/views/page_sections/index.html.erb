@@ -1,3 +1,9 @@
 <% @sections.each do |section| %>
-  <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
+  <%= content_tag :div, id: "#{page_layout(section)}", class: "page-section #{page_layout(section)}-container" do %>
+    <% if section.image.present? %>
+      <%= render "/page_sections/page_types/section_with_image", section: section %>
+    <% else %>
+      <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
+    <% end %>
+  <% end %>
 <% end %>
