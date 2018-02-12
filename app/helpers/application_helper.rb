@@ -1,6 +1,6 @@
 module ApplicationHelper
   def pages
-    PageSection.all
+    PageSection.all.order(:tag)
   end
 
   def to_snakecase(str)
