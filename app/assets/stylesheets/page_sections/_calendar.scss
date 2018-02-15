@@ -1,0 +1,13 @@
+@import 'fullcalendar';
+
+.calendar-container {
+  .fc-widget-header table {
+    margin: 0;
+  }
+
+  .fc-scroller {
+    overflow-y: hidden !important;
+    font-size: 14px;
+    line-height: normal;
+  }
+}

@@ -38,6 +38,10 @@ gem "paperclip", "~> 5.2.1"
 # Google APIs
 gem 'geocoder', github: 'alexreisner/geocoder'
 
+# Calendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
