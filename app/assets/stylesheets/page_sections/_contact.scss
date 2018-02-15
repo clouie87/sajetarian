@@ -1,12 +1,16 @@
 .contact-container {
   .contact-content {
     @include span-columns(6);
+    background-color: $grey;
+    color: $white;
+    border-radius: 18px;
+
     padding: $base-padding;
 
     .contact-info-wrapper {
       @include span-columns(10);
       float: none;
-      margin: 0 auto;
+      margin: $base-padding auto;
 
       .contact-info {
         margin: 0 10px;
@@ -14,14 +18,16 @@
     }
 
     .social-button-wrapper {
-      @include span-columns(12);
+      @include span-columns(6);
+      margin: $base-padding auto;
 
       .section-title {
-        padding: $base-padding 0;
+        padding: 10px;
       }
 
       .social {
         text-align: center;
+        font-size: 30px;
       }
 
       .social-connect {
