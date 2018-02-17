@@ -5,14 +5,14 @@
   .header-image {
     position: relative;
     height: $header-height;
-    background-image: asset-url('sajHeader.png');
+    background-image: asset-url('nav_banner.png');
   }
 
   .nav-overlay {
     height: $header-height;
     top: 0;
     left: 0;
-    background-color: rgba($white, 0.4);
+    background-color: rgba($grey, 0.4);
     position: absolute;
     width: 100%;
   }
@@ -43,6 +43,7 @@
 
   .nav-items {
     display: flex;
+    color: $white;
     list-style: none;
     margin: 0 $base-padding;
     cursor: pointer;
