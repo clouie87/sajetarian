@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # authentication
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise'
 gem 'activeadmin', github: 'activeadmin'
 
 # admin sorting
