@@ -12,7 +12,7 @@
     height: $header-height;
     top: 0;
     left: 0;
-    background-color: rgba($grey, 0.4);
+    background-color: rgba($grey, 0.2);
     position: absolute;
     width: 100%;
   }
@@ -35,8 +35,13 @@
       margin: 0 auto;
 
       .brand-logo {
+        background-image: $logo;
+        background-size: contain;
+        background-repeat: no-repeat;
         display: inline-block;
-        padding: 0 $base-padding;
+        margin: 0 $base-padding;
+        text-indent: -9999px;
+        width: $header-logo-width;
       }
     }
   }
