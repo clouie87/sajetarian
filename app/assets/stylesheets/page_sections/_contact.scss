@@ -1,50 +1,23 @@
 .contact-container {
   .contact-content {
     @include span-columns(6);
-    background-color: $grey;
+    background-image: $contact-bg-image;
+    background-size: cover;
+
     color: $white;
     border-radius: 18px;
 
     padding: $base-padding;
 
     .contact-info-wrapper {
-      @include span-columns(10);
-      float: none;
-      margin: $base-padding auto;
+      @include span-columns(6);
+      float: right;
+      margin: 0 auto;
+      margin-top: 120px;
+      padding-left: $base-padding;
 
       .contact-info {
         margin: 0 10px;
-      }
-    }
-
-    .social-button-wrapper {
-      @include span-columns(6);
-      margin: $base-padding auto;
-
-      .section-title {
-        padding: 10px;
-      }
-
-      .social {
-        text-align: center;
-        font-size: 30px;
-      }
-
-      .social-connect {
-        padding: 0 $base-padding;
-        text-decoration: none;
-      }
-
-      .twitter {
-        color: $twitter-blue;
-      }
-
-      .instagram {
-        color: $instagram-purple;
-      }
-
-      .facebook {
-        color: $facebook-blue;
       }
     }
   }
@@ -74,6 +47,37 @@
 
     input[type=submit] {
       @include submit-button;
+    }
+  }
+
+  .social-button-wrapper {
+    .section-title {
+      padding: 10px;
+    }
+
+    .social {
+      font-size: 30px;
+    }
+
+    .social-connect {
+      padding: 0 $base-padding;
+      text-decoration: none;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .twitter {
+      color: $twitter-blue;
+    }
+
+    .instagram {
+      color: $instagram-purple;
+    }
+
+    .facebook {
+      color: $facebook-blue;
     }
   }
 }
