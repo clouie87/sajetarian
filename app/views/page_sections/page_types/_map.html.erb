@@ -1,10 +1,9 @@
-<div class="map-content">
-  <%= render 'title', section: section %>
+<%= render 'title', section: section %>
 
-  <% todays_events.each do |event| %>
-    <p><strong>Where: </strong><%= event.address %></p>
-    <p><strong>When: </strong><%= event.start_time %> - <%= event.end_time %></p>
-  <% end %>
+<div class="map-content">
+  <div class="calendar-container">
+    <div id='event_calendar' class="calendar"></div>
+  </div>
 </div>
 
 <div class="map-section">

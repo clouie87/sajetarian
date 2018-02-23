@@ -1,13 +1,25 @@
 @import 'fullcalendar';
 
 .calendar-container {
+  $calendar-font-size: 14px;
+
+  .fc-header-toolbar {
+    font-size: $calendar-font-size;
+
+    h2 {
+      font-size: 16px;
+    }
+  }
+
   .fc-widget-header table {
     margin: 0;
+    font-size: $calendar-font-size;
   }
 
   .fc-scroller {
+    font-size: $calendar-font-size;
     overflow-y: hidden !important;
-    font-size: 14px;
+    height: 325px !important;
     line-height: normal;
   }
 }

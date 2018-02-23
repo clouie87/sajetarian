@@ -1,10 +1,10 @@
 .map-container {
   .map-content {
-    @include span-columns(4);
+    @include span-columns(6);
   }
 
   .map-section {
-    @include span-columns(8);
+    @include span-columns(6);
 
     #google-map {
       height: 400px;
