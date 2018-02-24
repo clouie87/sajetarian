@@ -43,7 +43,7 @@
   text-align: center;
 }
 
-.text-section {
+.text-section .description {
   @include span-columns(10);
   float: none;
   margin: auto !important;

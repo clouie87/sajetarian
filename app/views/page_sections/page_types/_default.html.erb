@@ -1,4 +1,6 @@
 <div class="content-container">
   <%= render 'title', section: section %>
-  <%= parsed_content(section.description) %>
+  <div class="description">
+    <%= parsed_content(section.description) %>
+  </div>
 </div>
