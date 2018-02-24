@@ -1,11 +1,14 @@
 .nav-container {
   height: $header-height;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 10;
 
   .header-image {
-    position: relative;
-    height: $header-height;
     background-image: asset-url('nav_banner.png');
+    height: $header-height;
+    position: relative;
   }
 
   .nav-overlay {

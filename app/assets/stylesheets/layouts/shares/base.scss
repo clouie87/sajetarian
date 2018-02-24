@@ -6,7 +6,7 @@ body {
 }
 
 .main-container {
-  margin: auto;
+  margin-top: $header-height;
   max-width: $content-max-width;
   padding: $base-padding;
 }
