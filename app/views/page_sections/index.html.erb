@@ -3,7 +3,9 @@
     <% if section.image.present? %>
       <%= render "/page_sections/page_types/section_with_image", section: section %>
     <% else %>
-      <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
+      <div class="text-section">
+        <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
+      </div>
     <% end %>
   <% end %>
 <% end %>

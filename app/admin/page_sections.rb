@@ -5,7 +5,7 @@ ActiveAdmin.register PageSection do
     sorting_attribute: :tag
 
   index :as => :sortable do
-    label :name # item content
+    label :label # item content
     actions
   end
 

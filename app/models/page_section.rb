@@ -8,4 +8,8 @@ class PageSection < ApplicationRecord
   def self.image_layouts
     ["image_on_right", "image_on_left"]
   end
+
+  def label
+    name.presence || subtitle
+  end
 end

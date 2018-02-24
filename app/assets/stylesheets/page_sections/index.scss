@@ -42,3 +42,9 @@
   margin-top: 0;
   text-align: center;
 }
+
+.text-section {
+  @include span-columns(10);
+  float: none;
+  margin: auto !important;
+}
