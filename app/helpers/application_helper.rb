@@ -1,6 +1,6 @@
 module ApplicationHelper
   def pages
-    PageSection.all.order(:tag)
+    PageSection.where(featured: true).order(:tag)
   end
 
   def to_snakecase(str)

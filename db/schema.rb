@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180211230338) do
+ActiveRecord::Schema.define(version: 20180224035216) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -64,6 +64,14 @@ ActiveRecord::Schema.define(version: 20180211230338) do
     t.string   "full_address"
   end
 
+  create_table "form_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "comment",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "menu_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
@@ -79,8 +87,8 @@ ActiveRecord::Schema.define(version: 20180211230338) do
     t.string   "name"
     t.string   "subtitle"
     t.text     "description",        limit: 65535
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.integer  "page_type_id"
     t.integer  "tag"
     t.string   "image_file_name"
@@ -89,6 +97,7 @@ ActiveRecord::Schema.define(version: 20180211230338) do
     t.datetime "image_updated_at"
     t.string   "image_layout"
     t.integer  "contact_id"
+    t.boolean  "featured",                         default: false, null: false
     t.index ["page_type_id"], name: "index_page_sections_on_page_type_id", using: :btree
   end
 

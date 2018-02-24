@@ -1,5 +1,5 @@
 ActiveAdmin.register PageSection do
-  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id
+  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id, :featured
 
   sortable tree: false,
     sorting_attribute: :tag
@@ -35,6 +35,7 @@ ActiveAdmin.register PageSection do
         f.input :contact, include_blank: false
       end
       f.input :image, hint: f.page_section.image? ? image_tag(page_section.image.url, height: '100') : content_tag(:span, 'Upload and image here')
+      f.input :featured
 		end
 		f.actions
 	end
