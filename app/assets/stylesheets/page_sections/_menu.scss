@@ -1,7 +1,16 @@
 #menu {
-
   .menu-items {
-    @include span-columns(6);
+    @include media($desktop) {
+      @include span-columns(6);
+    }
+
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
 
     .category-name {
       text-align: center;
