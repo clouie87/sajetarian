@@ -1,19 +1,70 @@
 .contact-container {
+  .contact-content-wrapper {
+    line-height: 1.6em;
+
+    @include media($desktop) {
+      @include span-columns(6);
+      display: flex;
+      font-size: 24px;
+      padding: $base-padding;
+    }
+
+    @include media($tablet) {
+      @include span-columns(12);
+      display: flex;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+      font-size: 14px;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
   .contact-content {
-    @include span-columns(6);
+    @include media($desktop) {
+      width: 100%;
+    }
+
+    @include media($tablet) {
+      width: 80%;
+    }
+
+    @include media($mobile) {
+      width: 100%;
+    }
+
     background-image: $contact-bg-image;
     background-size: cover;
     border-radius: 18px;
     color: $white;
-    font-size: 24px;
     padding: $base-padding;
+    padding-top: 80px;
+    margin: 0 auto;
 
     .contact-info-wrapper {
-      @include span-columns(6);
-      float: right;
-      margin: 0 auto;
-      margin-top: 150px;
-      padding-left: $base-padding;
+      @include media($desktop) {
+        @include span-columns(6);
+        margin-top: 80px;
+        float: right;
+        width: auto;
+      }
+
+      @include media($tablet) {
+        @include span-columns(12);
+        margin-top: $base-padding;
+        float: right;
+        width: auto;
+      }
+
+      @include media($mobile) {
+        @include span-columns(4);
+        float: right;
+        width: auto;
+      }
 
       .contact-info {
         margin: 0 10px;
