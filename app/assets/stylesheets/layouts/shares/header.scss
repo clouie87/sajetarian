@@ -56,8 +56,31 @@
     margin: 0 $base-padding;
     cursor: pointer;
 
+    @include media($mobile) {
+      background-color: rgba($grey, 0.8);
+      color: $white;
+      display: none;
+      position: absolute;
+      right: $base-padding;
+      top: 45px;
+    }
+
     li {
       padding: 0 $base-padding;
     }
+  }
+
+  .cross,
+  .hamburger {
+    color: $white;
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 0;
+  }
+
+  .cross {
+    font-size: 2em;
+    padding: 5px;
   }
 }
