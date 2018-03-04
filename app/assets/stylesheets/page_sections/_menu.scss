@@ -1,31 +1,34 @@
-.menu-items {
-  @include span-columns(6);
+#menu {
 
-  .category-name {
-    text-align: center;
-    font-weight: 300
-  }
+  .menu-items {
+    @include span-columns(6);
 
-  .menu-item {
-    margin: auto $base-padding;
-    position: relative;
-
-    .name,
-    .price {
-      display: inline-block;
-      margin: 0;
+    .category-name {
+      text-align: center;
+      font-weight: 300
     }
 
-    .price {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    .menu-item {
+      margin: auto $base-padding;
+      position: relative;
 
-    .note {
-      color: grey;
-      font-size: 14px;
-      line-height: 1.4em;
+      .name,
+      .price {
+        display: inline-block;
+        margin: 0;
+      }
+
+      .price {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .note {
+        color: grey;
+        font-size: 14px;
+        line-height: 1.4em;
+      }
     }
   }
 }

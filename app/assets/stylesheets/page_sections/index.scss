@@ -41,7 +41,15 @@
   font-size: 24px;
   margin-top: 0;
   text-align: center;
+  position: relative;
 }
+
+.content-container {
+  @include media($mobile) {
+    margin-top: -100px !important;
+  }
+}
+
 
 .text-section .description {
   @include span-columns(10);

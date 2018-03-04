@@ -6,7 +6,6 @@ $(function() {
   $(document).on('click', closeMenuButton, closeHambugerMenu);
 
   $(showMenuButton).show();
-  $('.nav-items').hide();
 
   function openHambugerMenu() {
     $(showMenuButton).hide();

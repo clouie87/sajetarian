@@ -5,11 +5,13 @@
   width: 100%;
   z-index: 10;
 
+
   .header-image {
     background-image: asset-url('nav_banner.png');
     height: $header-height;
     position: relative;
   }
+
 
   .nav-overlay {
     height: $header-height;

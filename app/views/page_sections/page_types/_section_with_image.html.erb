@@ -1,6 +1,7 @@
 <div class="image-layout">
   <div class="<%= section.image_layout %>">
     <%= image_tag section.image %>
+    <div class="image-overlay"></div>
   </div>
 
   <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
