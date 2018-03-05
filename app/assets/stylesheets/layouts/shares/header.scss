@@ -57,7 +57,7 @@
     margin: 0 $base-padding;
     cursor: pointer;
 
-    @include media($mobile) {
+    @include media($tablet-and-smaller) {
       background: $white;
       color: $grey;
       display: none;
@@ -72,7 +72,7 @@
     li {
       padding: 0 $base-padding;
 
-      @include media($mobile) {
+      @include media($tablet-and-smaller) {
         padding: 5px $base-padding;
         border-bottom: 1px solid grey;
       }
@@ -89,7 +89,7 @@
   }
 
   .hamburger {
-    @include media($mobile) {
+    @include media($tablet-and-smaller) {
       display: block;
     }
   }
