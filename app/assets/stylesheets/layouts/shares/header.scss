@@ -12,7 +12,6 @@
     position: relative;
   }
 
-
   .nav-overlay {
     height: $header-height;
     top: 0;
@@ -59,30 +58,54 @@
     cursor: pointer;
 
     @include media($mobile) {
-      background-color: rgba($grey, 0.8);
-      color: $white;
+      background: $white;
+      color: $grey;
       display: none;
+      height: 100vh;
       position: absolute;
-      right: $base-padding;
+      padding: $base-padding;
+      right: -$base-padding;
       top: 45px;
+      width: 250px;
     }
 
     li {
       padding: 0 $base-padding;
+
+      @include media($mobile) {
+        padding: 5px $base-padding;
+        border-bottom: 1px solid grey;
+      }
     }
   }
 
   .cross,
   .hamburger {
-    color: $white;
     display: none;
+    color: $white;
     position: absolute;
     right: 40px;
     top: 0;
+  }
+
+  .hamburger {
+    @include media($mobile) {
+      display: block;
+    }
   }
 
   .cross {
     font-size: 2em;
     padding: 5px;
   }
+}
+
+.menu-content-overlay {
+  display: none;
+  background-color: rgba($grey, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: -20px;
+  z-index: 2;
 }
