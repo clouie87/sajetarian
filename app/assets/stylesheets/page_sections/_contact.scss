@@ -1,24 +1,26 @@
 .contact-container {
   .contact-content-wrapper {
     line-height: 1.6em;
+    @include span-columns(6);
+    display: flex;
 
-    @include media($desktop) {
-      @include span-columns(6);
+    @include media($tablet-horizontal) {
+      @include span-columns(12);
       display: flex;
-      font-size: 24px;
+      margin: 0 auto;
       padding: $base-padding;
     }
 
     @include media($tablet) {
       @include span-columns(12);
       display: flex;
-      font-size: 18px;
       margin: 0 auto;
+      padding: $base-padding;
     }
+
 
     @include media($mobile) {
       @include span-columns(4);
-      font-size: 14px;
       display: flex;
       margin: 0 auto;
     }
@@ -26,44 +28,58 @@
 
   .contact-content {
     @include media($desktop) {
+      padding-top: 80px;
       width: 100%;
     }
 
+    @include media($tablet-horizontal) {
+      padding-top: 80px;
+      width: 60%;
+      margin: 0 auto;;
+    }
+
     @include media($tablet) {
+      padding-top: 80px;
       width: 80%;
+      margin: 0 auto;;
     }
 
     @include media($mobile) {
       width: 100%;
     }
 
+
     background-image: $contact-bg-image;
     background-size: cover;
     border-radius: 18px;
     color: $white;
-    padding: $base-padding;
-    padding-top: 80px;
+    padding-bottom: $base-padding;
     margin: 0 auto;
 
     .contact-info-wrapper {
+      float: right;
+      margin-top: 80px;
+      margin-right: 20px;
+      width: 50%;
+
       @include media($desktop) {
-        @include span-columns(6);
-        margin-top: 80px;
-        float: right;
-        width: auto;
+        font-size: 24px;
+      }
+
+      @include media($tablet-horizontal) {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 16px;
       }
 
       @include media($tablet) {
-        @include span-columns(12);
-        margin-top: $base-padding;
-        float: right;
-        width: auto;
+        width: 60%;
+        margin: 0 auto;
+        font-size: 16px;
       }
 
       @include media($mobile) {
-        @include span-columns(4);
-        float: right;
-        width: auto;
+        font-size: 14px;
       }
 
       .contact-info {
@@ -73,8 +89,23 @@
   }
 
   .contact-form {
-    @include span-columns(6);
     position: relative;
+
+    @include media($desktop) {
+      @include span-columns(6);
+    }
+
+    @include media($tablet-horizontal) {
+      @include span-columns(12);
+    }
+
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
 
     .input-field {
       padding: $base-padding 0;
