@@ -1,7 +1,6 @@
 .contact-container {
   @include media($mobile) {
-    padding: $base-padding;
-    margin: $base-padding;
+    padding: 10px;
   }
 
   .contact-content-wrapper {
@@ -26,6 +25,7 @@
 
     @include media($mobile) {
       @include span-columns(12);
+      padding: 0 $base-padding;
       display: flex;
       margin: 0 auto;
     }
@@ -50,6 +50,7 @@
     }
 
     @include media($mobile) {
+      padding: 0 $base-padding;
       width: 100%;
     }
 
@@ -110,7 +111,7 @@
 
     @include media($mobile) {
       @include span-columns(12);
-      margin: $base-padding 0;
+      padding: $base-padding;
     }
 
     .input-field {
