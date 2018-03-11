@@ -6,8 +6,15 @@ body {
 }
 
 .main-container {
-  margin-top: $header-height;
   max-width: $content-max-width;
-  padding: $base-padding;
   position: relative;
+
+  @include media($tablet-and-larger) {
+    margin-top: $header-height;
+    padding: $base-padding;
+  }
+
+  @include media($mobile) {
+    padding: $base-padding 0;
+  }
 }

@@ -1,7 +1,10 @@
 .page-section {
   @include outer-container;
-  padding: $base-padding;
   margin: $section-margin auto;
+
+  @include media($tablet-and-larger) {
+    padding: $base-padding;
+  }
 }
 
 .section-title {
@@ -45,14 +48,23 @@
 }
 
 .content-container {
-  @include media($mobile) {
-    margin-top: -100px !important;
+  .description {
+    @include media($mobile) {
+      padding: $base-padding;
+    }
   }
 }
 
 
 .text-section .description {
-  @include span-columns(10);
   float: none;
   margin: auto !important;
+
+  @include media($tablet-and-larger) {
+    @include span-columns(10);
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+  }
 }

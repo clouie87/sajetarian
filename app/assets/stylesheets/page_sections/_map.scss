@@ -1,10 +1,22 @@
 .map-container {
   .map-content {
-    @include span-columns(6);
+    @include media($tablet-and-larger) {
+      @include span-columns(6);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
   }
 
   .map-section {
-    @include span-columns(6);
+    @include media($tablet-and-larger) {
+      @include span-columns(6);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
 
     #google-map {
       height: 400px;
