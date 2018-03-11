@@ -12,8 +12,8 @@ $(function() {
   }
 
   function closeHambugerMenu() {
-    $('.nav-items').hide();
     $(showMenuButton).show();
+    $('.nav-items').hide();
     $(closeMenuButton).hide();
   }
 });

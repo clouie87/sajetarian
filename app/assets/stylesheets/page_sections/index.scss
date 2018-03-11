@@ -57,11 +57,10 @@
 
 
 .text-section .description {
-  float: none;
-  margin: auto !important;
-
   @include media($tablet-and-larger) {
     @include span-columns(10);
+    float: none;
+    margin: auto !important;
   }
 
   @include media($mobile) {
