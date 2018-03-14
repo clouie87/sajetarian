@@ -1,4 +1,16 @@
 #menu {
+  .btn-wrapper {
+    text-align: center;
+  }
+
+  .btn {
+    @include button;
+    color: $white;
+    font-size: 14px;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
   .menu-items {
     @include media($desktop) {
       @include span-columns(6);

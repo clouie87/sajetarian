@@ -136,7 +136,9 @@
     }
 
     input[type=submit] {
-      @include submit-button;
+      @include button;
+      position: absolute;
+      right: 0;
     }
   }
 
