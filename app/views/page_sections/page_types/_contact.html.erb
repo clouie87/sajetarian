@@ -8,8 +8,8 @@
       <div class="contact-info-wrapper">
         <p class="contact-info"><%= section.contact.name %></p>
         <p class="contact-info"><%= section.contact.address %></p>
-        <p class="contact-info"><%= section.contact.email_address %></p>
-        <p class="contact-info"><%= section.contact.phone_number %></p>
+        <a class="contact-info" href="mailto:<%= section.contact.email_address %>"><%= section.contact.email_address %></a>
+        <a class="contact-info" href="tel:<%= section.contact.phone_number %>"><%= section.contact.phone_number %></a>
       </div>
     </div>
   </div>

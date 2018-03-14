@@ -55,7 +55,6 @@
   }
 }
 
-
 .text-section .description {
   @include media($tablet-and-larger) {
     @include span-columns(10);

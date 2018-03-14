@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'events/index'
   get 'events/todays_events'
+  get 'download_menu' => "page_sections#download_menu"
+
 
   defaults format: :json do
     resources :events

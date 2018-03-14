@@ -1,5 +1,6 @@
 <div class="content-container">
   <%= render 'title', section: section %>
+  <%= link_to "Download Menu", "download_menu", class: "btn btn-sm btn-default", target: "_blank" %>
   <%= section.description %>
 
   <% menu_item_categories.each do |category| %>
