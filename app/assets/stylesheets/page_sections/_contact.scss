@@ -96,49 +96,17 @@
     }
   }
 
-  .contact-form {
+  .instagram-media {
+    @include span-columns(12);
     position: relative;
 
-    @include media($desktop) {
-      @include span-columns(6);
+    .slick-list {
+      overflow: hidden;
     }
 
-    @include media($tablet-horizontal) {
-      @include span-columns(10);
-    }
-
-    @include media($tablet) {
-      @include span-columns(10);
-    }
-
-    @include media($mobile) {
-      @include span-columns(12);
-      padding: $base-padding;
-    }
-
-    .input-field {
-      padding: $base-padding 0;
-      position: relative;
-
-      i {
-        color: $disabled-grey;
-        font-size: 30px;
-        left: 0;
-        top: $base-padding;
-        position: absolute;
-      }
-
-      textarea,
-      input[type=email],
-      input[type=text] {
-        @include form-input;
-      }
-    }
-
-    input[type=submit] {
-      @include button;
-      position: absolute;
-      right: 0;
+    img {
+      max-height: 400px;
+      padding: 10px;
     }
   }
 

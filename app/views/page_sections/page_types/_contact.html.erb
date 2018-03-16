@@ -14,24 +14,6 @@
     </div>
   </div>
 
-  <div class="contact-form">
-    <%= form_for :contact_user, url: { controller: "form_submissions", action: "create" } do |form| %>
-      <div class="input-field">
-        <%= form.text_field :name, placeholder: "Name", class: "validate" %>
-        <i class="far fa-user icon-outline"></i>
-      </div>
 
-      <div class="input-field">
-        <%= form.text_field :email, placeholder: "Email", class: "validate" %>
-        <i class="far fa-envelope icon-outline"></i>
-      </div>
-
-      <div class="input-field">
-        <%= form.text_area :comment, class: "textarea" %>
-        <i class="far fa-comment icon-outline"></i>
-      </div>
-
-      <%= form.submit "Submit" %>
-    <% end %>
-  </div>
+  <div class="instagram-media"></div>
 </div>
