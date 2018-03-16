@@ -5,14 +5,29 @@
 
   <div class="contact-content-wrapper">
     <div class="contact-content">
-      <div class="contact-info-wrapper">
-        <p class="contact-info"><%= section.contact.name %></p>
-        <p class="contact-info"><%= section.contact.address %></p>
-        <a class="contact-info" href="mailto:<%= section.contact.email_address %>"><%= section.contact.email_address %></a>
-        <a class="contact-info" href="tel:<%= section.contact.phone_number %>"><%= section.contact.phone_number %></a>
+      <p class="contact-info">Name: <%= section.contact.name %></p>
+      <% if section.contact.address.present? %>
+        <p class="contact-info">Address: <%= section.contact.address %></p>
+      <% end %>
+      <span class="contact-info">Email: <a href="mailto:<%= section.contact.email_address %>"><%= section.contact.email_address %></a></span>
+      <span class="contact-info">Phone: <a href="tel:<%= section.contact.phone_number %>"><%= section.contact.phone_number %></a></span>
+    </div>
+
+    <div class="social-buttons">
+      <div class="social">
+        <a href="https://twitter.com/sajetarian" class="social-connect twitter" target="_blank">
+      		<i class="fab fa-twitter icon-outline"></i>
+        </a>
+        <a href="https://www.instagram.com/sajetarian/" class="social-connect instagram" target="_blank">
+      		<i class="fab fa-instagram icon-outline"></i>
+        </a>
+        <a href="https://www.facebook.com/SAJetarian/" class="social-connect facebook" target="_blank">
+      		<i class="fab fa-facebook-f icon-outline"></i>
+        </a>
       </div>
     </div>
   </div>
+
 
 
   <div class="instagram-media"></div>

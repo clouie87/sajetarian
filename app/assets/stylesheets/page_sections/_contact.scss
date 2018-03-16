@@ -1,103 +1,46 @@
 .contact-container {
+
   @include media($mobile) {
     padding: 10px;
   }
 
   .contact-content-wrapper {
-    line-height: 1.6em;
-    @include span-columns(6);
-    display: flex;
+    @include span-columns(4);
 
-    @include media($tablet-horizontal) {
-      @include span-columns(12);
-      display: flex;
-      margin: 0 auto;
-      padding: $base-padding;
+    .contact-info {
+      display: block;
+      margin: 0 10px;
+      text-decoration: none;
     }
 
-    @include media($tablet) {
-      @include span-columns(12);
-      display: flex;
-      margin: 0 auto;
-      padding: $base-padding;
-    }
+    .social-buttons {
+      display: inline-block;
+      font-size: 24px;
+      padding: $base-padding 0;
 
 
-    @include media($mobile) {
-      @include span-columns(12);
-      padding: 0 $base-padding;
-      display: flex;
-      margin: 0 auto;
-    }
-  }
-
-  .contact-content {
-    @include media($desktop) {
-      padding-top: 80px;
-      width: 100%;
-    }
-
-    @include media($tablet-horizontal) {
-      padding-top: 80px;
-      width: 60%;
-      margin: 0 auto;;
-    }
-
-    @include media($tablet) {
-      padding-top: 80px;
-      width: 80%;
-      margin: 0 auto;;
-    }
-
-    @include media($mobile) {
-      padding: 0 $base-padding;
-      width: 100%;
-    }
-
-    background-image: $contact-bg-image;
-    background-size: cover;
-    border-radius: 18px;
-    color: $white;
-    padding-bottom: $base-padding;
-    margin: 0 auto;
-
-    .contact-info-wrapper {
-      float: right;
-      margin-top: 80px;
-      margin-right: 20px;
-      width: auto;
-
-      @include media($desktop) {
-        font-size: 24px;
-      }
-
-      @include media($tablet-horizontal) {
-        width: 60%;
-        margin: 0 auto;
-        font-size: 16px;
-      }
-
-      @include media($tablet) {
-        width: 60%;
-        margin: 0 auto;
-        font-size: 16px;
-      }
-
-      @include media($mobile) {
-        font-size: 14px;
-      }
-
-      .contact-info {
-        display: block;
-        margin: 0 10px;
-        color: $white;
+      .social-connect {
+        padding: 0 $base-padding;
         text-decoration: none;
+      }
+
+
+      .twitter {
+        color: $twitter-blue;
+      }
+
+      .instagram {
+        color: $instagram-purple;
+      }
+
+      .facebook {
+        color: $facebook-blue;
       }
     }
   }
 
   .instagram-media {
-    @include span-columns(12);
+    @include span-columns(8);
     position: relative;
 
     .slick-list {
@@ -108,36 +51,10 @@
       max-height: 400px;
       padding: 10px;
     }
-  }
 
-  .social-button-wrapper {
-    .section-title {
-      padding: 10px;
-    }
-
-    .social {
-      font-size: 30px;
-    }
-
-    .social-connect {
-      padding: 0 $base-padding;
-      text-decoration: none;
-
-      &:first-child {
-        padding-left: 0;
-      }
-    }
-
-    .twitter {
-      color: $twitter-blue;
-    }
-
-    .instagram {
-      color: $instagram-purple;
-    }
-
-    .facebook {
-      color: $facebook-blue;
+    button:not(.disabled):hover {
+      background-color: $brand-accent-color-light;
+      background-image: none;
     }
   }
 }
