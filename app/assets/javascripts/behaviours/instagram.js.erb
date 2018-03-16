@@ -9,7 +9,7 @@ $(document).ready(function() {
     centerMode: true,
     variableWidth: true });
 
-  var instgram_url = "https://api.instagram.com/v1/users/ENV["INSTAGRAM_USER_ID"]/media/recent?access_token=ENV["ACCESS_TOKEN"]";
+  var instgram_url = "https://api.instagram.com/v1/users/<%= ENV['INSTAGRAM_USER_ID'] %>/media/recent?access_token=<%= ENV['INSTAGRAM_ACCESS_TOKEN'] %>";
   $.get(instgram_url, function(response) {
     var data = response.data
 

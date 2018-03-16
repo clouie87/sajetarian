@@ -26,6 +26,8 @@ gem 'activeadmin', github: 'activeadmin'
 gem "active_admin-sortable_tree", "~> 2.0.0"
 gem 'ancestry'
 
+gem "figaro"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
