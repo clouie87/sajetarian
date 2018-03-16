@@ -3,4 +3,7 @@
     <h2 class="title"><%= section.name %></h2>
   </div>
 <% end %>
-<h3 class="subtitle"><%= section.subtitle %></h3>
+
+<% if section.subtitle.present? %>
+  <h3 class="subtitle"><%= section.subtitle %></h3>
+<% end %>
