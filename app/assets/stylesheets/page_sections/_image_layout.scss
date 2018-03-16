@@ -1,11 +1,24 @@
 .image-layout {
   @include span-columns(12);
 
+  @include media($desktop) {
+    display: flex;
+  }
+
   .image-wrapper {
     overflow: hidden;
     position: relative;
-    @include span-columns(4);
 
+    @include media($desktop) {
+      @include span-columns(4);
+      flex: 0 0 33%;
+    }
+
+    @include media($tablet-horizontal) {
+      @include span-columns(12);
+      float: unset;
+      max-height: 250px;
+    }
 
     @include media($tablet-and-smaller) {
       @include span-columns(12);
