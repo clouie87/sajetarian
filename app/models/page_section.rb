@@ -1,4 +1,9 @@
 class PageSection < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
+  has_ancestry orphan_strategy: :rootify
+
   belongs_to :page_type
   belongs_to :contact, optional: true
 

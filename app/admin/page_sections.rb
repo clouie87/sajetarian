@@ -1,7 +1,7 @@
 ActiveAdmin.register PageSection do
   permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id, :featured
 
-  sortable tree: false,
+  sortable tree: true,
     sorting_attribute: :tag
 
   index :as => :sortable do

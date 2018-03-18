@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224035216) do
+ActiveRecord::Schema.define(version: 20180318014513) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -72,6 +72,18 @@ ActiveRecord::Schema.define(version: 20180224035216) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+  end
+
   create_table "menu_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
@@ -98,7 +110,11 @@ ActiveRecord::Schema.define(version: 20180224035216) do
     t.string   "image_layout"
     t.integer  "contact_id"
     t.boolean  "featured",                         default: false, null: false
+    t.string   "ancestry"
+    t.string   "slug"
+    t.index ["ancestry"], name: "index_page_sections_on_ancestry", using: :btree
     t.index ["page_type_id"], name: "index_page_sections_on_page_type_id", using: :btree
+    t.index ["slug"], name: "index_page_sections_on_slug", unique: true, using: :btree
   end
 
   create_table "page_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

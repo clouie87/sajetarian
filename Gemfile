@@ -27,6 +27,7 @@ gem "active_admin-sortable_tree", "~> 2.0.0"
 gem 'ancestry'
 
 gem "figaro"
+gem 'friendly_id', '~> 5.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

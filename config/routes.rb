@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :form_submissions, only: :create
+  resources :page_sections
 
-  root 'page_sections#index'
+  root 'page_sections#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

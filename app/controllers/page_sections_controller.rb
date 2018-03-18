@@ -2,10 +2,17 @@ class PageSectionsController < ActionController::Base
   layout "application"
 
   def index
-    @sections = PageSection.all.order(:tag)
+    @sections = PageSection.roots.order(:tag)
   end
 
   def show
+    page_slug = params[:id] || 'home'
+    page = PageSection.friendly.find(page_slug)
+    if !page.has_children?
+      @sections = [page]
+    else
+      @sections = page.children.order(:tag)
+    end
   end
 
   def create

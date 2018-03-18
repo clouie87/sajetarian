@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+PageSection.all.each do |page|
+  page.slug = page.name.parameterize.underscore
+  page.save
+end
