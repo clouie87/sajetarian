@@ -1,6 +1,9 @@
 <div class="content-container">
   <%= render 'title', section: section %>
   <div class="description">
-    <%= parsed_content(section.description, linked_text: section.link_text, linked_section: section.page_section_id) %>
+    <%= parsed_content(section.description) %>
+    <% if section.link_text && section.page_section_id %>
+      <%= link_to section.link_text, page_section_path(PageSection.find(section.page_section_id)) %>
+    <% end %>
   </div>
 </div>
