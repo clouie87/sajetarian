@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318014513) do
+ActiveRecord::Schema.define(version: 20180319042141) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -112,6 +112,8 @@ ActiveRecord::Schema.define(version: 20180318014513) do
     t.boolean  "featured",                         default: false, null: false
     t.string   "ancestry"
     t.string   "slug"
+    t.string   "link_text"
+    t.integer  "page_section_id"
     t.index ["ancestry"], name: "index_page_sections_on_ancestry", using: :btree
     t.index ["page_type_id"], name: "index_page_sections_on_page_type_id", using: :btree
     t.index ["slug"], name: "index_page_sections_on_slug", unique: true, using: :btree

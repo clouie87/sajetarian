@@ -52,6 +52,10 @@
     @include media($mobile) {
       padding: $base-padding;
     }
+
+    a {
+      color: $brand-accent-color;
+    }
   }
 }
 

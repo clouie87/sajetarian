@@ -3,7 +3,8 @@ ActiveAdmin.register PageSection do
     @page_section = PageSection.friendly.find(params[:id])
   end
 
-  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id, :featured
+  permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id,
+                :featured, :link_text, :page_section_id
 
   sortable tree: true,
     sorting_attribute: :tag
@@ -35,6 +36,8 @@ ActiveAdmin.register PageSection do
       f.input :tag
       f.input :image_layout, as: :select, collection: PageSection.image_layouts.map {|layout| [layout.humanize, layout] }, include_blank: false
 			f.input :page_type, include_blank: false
+			f.input :link_text
+			f.input :page_section, include_blank: true, as: :select, collection: PageSection.all.roots
       if page_section.page_type.present? && page_section.page_type.name == "Contact"
         f.input :contact, include_blank: false
       end

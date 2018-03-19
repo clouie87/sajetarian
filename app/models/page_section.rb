@@ -3,6 +3,7 @@ class PageSection < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_ancestry orphan_strategy: :rootify
+  belongs_to :page_section, optional: true
 
   belongs_to :page_type
   belongs_to :contact, optional: true
