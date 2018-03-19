@@ -1,5 +1,5 @@
 ActiveAdmin.register PageSection do
-  before_filter :except => [:index] do
+  before_filter :only => [:edit, :show] do
     @page_section = PageSection.friendly.find(params[:id])
   end
 
