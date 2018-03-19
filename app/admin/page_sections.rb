@@ -1,4 +1,8 @@
 ActiveAdmin.register PageSection do
+  before_filter :except => [:index] do
+    @page_section = PageSection.friendly.find(params[:id])
+  end
+
   permit_params :name, :subtitle, :description, :tag, :page_type_id, :image, :image_layout, :contact_id, :featured
 
   sortable tree: true,
