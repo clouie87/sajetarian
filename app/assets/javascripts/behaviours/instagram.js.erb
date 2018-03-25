@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function loadInstagram() {
   var instagramMedia = $('.instagram-media');
   instagramMedia.slick({
     slidesToShow: 1,
@@ -18,5 +18,6 @@ $(document).ready(function() {
       console.log(value.images.standard_resolution.url)
     })
   })
+}
 
-})
+$(document).on('turbolinks:load', loadInstagram);
