@@ -7,6 +7,10 @@
   .contact-content-wrapper {
     @include span-columns(4);
 
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+
     .contact-info {
       display: block;
       margin: 0 10px;
@@ -42,6 +46,10 @@
   .instagram-media {
     @include span-columns(8);
     position: relative;
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
 
     .slick-list {
       overflow: hidden;
