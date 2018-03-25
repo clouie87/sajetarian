@@ -2,5 +2,5 @@ $desktop: new-breakpoint(min-width 801px);
 $tablet-horizontal: new-breakpoint(max-width 800px min-width 601px);
 $tablet: new-breakpoint(max-width 600px min-width 481px);
 $tablet-and-larger: new-breakpoint(min-width 481px);
-$tablet-and-smaller: new-breakpoint(max-width 600px);
+$tablet-and-smaller: new-breakpoint(max-width 700px);
 $mobile: new-breakpoint(max-width 480px);
