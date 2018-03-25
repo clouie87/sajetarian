@@ -1,14 +1,7 @@
 function initMap(events = []) {
   var results = [];
   var new_data = [];
-  var home = {lat: 49.2897713, lng: -123.1343084};
-
-
-  var map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 12,
-    center: home
-  });
-
+  var home = {lat: 49.2680207, lng: -123.113491}
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
   $.ajax({
@@ -22,23 +15,29 @@ function initMap(events = []) {
         return results
       });
 
-      var markers = results.map(function(location, i) {
-
-        return new google.maps.Marker({
-          position: location,
-          label: labels[i % labels.length],
-          map: map
-        });
+      var map = new google.maps.Map(document.getElementById('google-map'), {
+        zoom: 12,
       });
 
-      return markers
+      if (results.length > 0) {
+        map.setCenter(results[0]);
+        var markers = results.map(function(location, i) {
+
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length],
+            map: map
+          });
+        });
+
+        return markers
+      } else {
+        map.setCenter(home);
+        var marker = new google.maps.Marker({
+          position: home,
+          map: map
+        });
+      }
     }
   })
-}
-
-function getMap() {
-  var home = {lat: 49.2897713, lng: -123.1343084};
-  return new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 16,
-  });
 }

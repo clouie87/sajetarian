@@ -8,8 +8,15 @@
 
 <div class="map-section">
   <div id="google-map">
+    <script>
+      if(window.google){
+        initMap();
+      } else{
+        $.ajax('https://maps.googleapis.com/maps/api/js?signed_in=false&callback=initMap', {
+          crossDomain: true,
+          dataType: 'script'
+        });
+      }
+    </script>
   </div>
-  <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnsIdbz6JGAtDuQBEpdWYA1GBZY5-7I7c&callback=initMap">
-  </script>
 </div>

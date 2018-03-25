@@ -8,11 +8,11 @@ function eventCalendar() {
     right:  'today prev, next'
     },
     displayEventEnd: true,
-    eventColor: '#378006',
+    eventColor: '#cd9b00',
     events: '/events.json',
     timeFormat: 'h(:mm)',
     eventClick: function(calEvent, jsEvent, view) {
-      $(this).css('border-color', 'red');
+      $(this).css('border-color', '#bb974d');
 
       var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 12,
