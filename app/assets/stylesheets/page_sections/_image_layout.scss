@@ -68,14 +68,17 @@
 
     @include media($mobile) {
       position: relative;
-      margin-top: -50px !important;
     }
   }
 
   .section-title {
+    @include media($mobile) {
+      margin-top: -90px !important;
+    }
+
     .title {
       @include media($mobile) {
-        color: $white
+        color: $white;
       }
     }
   }

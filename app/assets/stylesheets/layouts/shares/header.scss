@@ -60,11 +60,11 @@
     margin: 0 $base-padding;
     cursor: pointer;
 
-    @include media($desktop) {
+    @include media($tablet-and-larger) {
       display: flex !important;
     }
 
-    @include media($tablet-and-smaller) {
+    @include media($mobile) {
       background: $white;
       color: $grey;
       display: none;
@@ -79,23 +79,22 @@
     li {
       padding: 0 $base-padding;
 
-      @include media($tablet-and-smaller) {
+      @include media($mobile) {
         padding: 5px $base-padding;
         border-bottom: 1px solid grey;
       }
     }
   }
 
-
   .cross,
   .hamburger {
     display: none;
 
-    @include media($desktop) {
+    @include media($tablet-and-larger) {
       display: none !important;
     }
 
-    @include media($tablet-and-smaller) {
+    @include media($mobile) {
       color: $white;
       position: absolute;
       right: 40px;
@@ -104,13 +103,13 @@
   }
 
   .hamburger {
-    @include media($tablet-and-smaller) {
+    @include media($mobile) {
       display: block;
     }
   }
 
   .cross {
-    @include media($tablet-and-smaller) {
+    @include media($mobile) {
       font-size: 2em;
       padding: 5px;
     }
@@ -118,7 +117,7 @@
 }
 
 .menu-content-overlay {
-  @include media($tablet-and-smaller) {
+  @include media($mobile) {
     display: none;
     background-color: rgba($grey, 0.8);
     width: 100%;

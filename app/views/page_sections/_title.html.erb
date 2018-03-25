@@ -1,9 +1,6 @@
-<% if section.name.present? %>
-  <div class="section-title">
+<div class="section-title">
+  <% if section.name.present? %>
     <h2 class="title"><%= section.name %></h2>
-  </div>
-<% end %>
-
-<% if section.subtitle.present? %>
+  <% end %>
   <h3 class="subtitle"><%= section.subtitle %></h3>
-<% end %>
+</div>
