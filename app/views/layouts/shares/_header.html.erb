@@ -9,15 +9,7 @@
         <li data-behaviour="show-hamburger-menu" class="hamburger">&#9776;</li>
         <li data-behaviour="hide-hamburger-menu" class="cross">&#735;</li>
         <ul class="right nav-items">
-
-          <% if pages.present? %>
-            <% pages.each do |section| %>
-              <% anchor = to_snakecase(section.name) %>
-              <li data-behaviour = "scroll-button" data-target = "<%= anchor %>" class = "nav-button" >
-                <%= section.name %>
-              </li>
-            <% end %>
-          <% end %>
+          <%= yield :header_nav %>
         </ul>
       </div>
     </div>

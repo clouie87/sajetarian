@@ -1,4 +1,8 @@
 module PageSectionHelper
+  def featured_sections(sections)
+    sections.where(featured: true).order(:tag)
+  end
+
   def page_layout(section)
     section.page_type.name.downcase
   end

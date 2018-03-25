@@ -1,3 +1,12 @@
+<% content_for :header_nav do %>
+  <% featured_sections(@sections).each do |section| %>
+    <% anchor = to_snakecase(section.name) %>
+    <li data-behaviour = "scroll-button" data-target = "<%= anchor %>" class = "nav-button" >
+      <%= section.name %>
+    </li>
+  <% end %>
+<% end %>
+
 <% @sections.each do |section| %>
   <%= content_tag :div, id: "#{to_snakecase(section.name)}", class: "page-section #{page_layout(section)}-container" do %>
     <% if section.image.present? %>
