@@ -41,3 +41,5 @@ function initMap(events = []) {
     }
   })
 }
+
+$(document).on('turbolinks:load', initMap);
