@@ -6,8 +6,13 @@ body {
 }
 
 .main-container {
+  margin: auto;
   max-width: $content-max-width;
   position: relative;
+
+  @include media($larger) {
+    max-width: 100%;
+  }
 
   @include media($tablet-and-larger) {
     margin-top: $header-height;

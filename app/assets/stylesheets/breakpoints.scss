@@ -1,3 +1,4 @@
+$larger: new-breakpoint(min-width 1280px);
 $desktop: new-breakpoint(min-width 801px);
 $tablet-horizontal: new-breakpoint(max-width 800px min-width 601px);
 $tablet: new-breakpoint(max-width 600px min-width 481px);
