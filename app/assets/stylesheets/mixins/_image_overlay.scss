@@ -1,0 +1,10 @@
+@mixin image-overlay($height) {
+  width: 100%;
+  max-height: $height;
+  background-image: linear-gradient(to bottom right, #d3d3d3, #002f4b);
+  opacity: 0.7;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

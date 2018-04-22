@@ -12,7 +12,7 @@ class PageSection < ApplicationRecord
   	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def self.image_layouts
-    ["image_on_right", "image_on_left"]
+    ["image_on_right", "image_on_left", "full_image", "no_image"]
   end
 
   def label

@@ -1,8 +1,16 @@
-<div class="image-layout">
-  <div class="image-wrapper <%= section.image_layout %>">
-    <%= image_tag section.image %>
+<% if section.image_layout == "full_image" %>
+  <figure class="<%= section.image_layout %>" data-context-name="image">
+    <%= image_tag section.image, class: "component-background" %>
     <div class="image-overlay"></div>
-  </div>
+    <div class="full-image-caption"><%= parsed_content(section.description) %></div>
+  </figure>
+<% else %>
+  <div class="image-layout">
+    <div class="image-wrapper <%= section.image_layout %>">
+      <%= image_tag section.image %>
+      <div class="image-overlay"></div>
+    </div>
 
-  <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
-</div>
+    <%= render "/page_sections/page_types/#{page_layout(section)}", section: section %>
+  </div>
+<% end %>
