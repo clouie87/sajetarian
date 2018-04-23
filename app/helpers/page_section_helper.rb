@@ -7,6 +7,16 @@ module PageSectionHelper
     section.page_type.name.downcase
   end
 
+  def full_image_caption(content)
+    if content == "Sajetarian"
+      text = content_tag :div, nil, class: "logo"
+    else
+      text = content_tag :div, parsed_content(content), class: "caption-description"
+    end
+
+    content_tag :div, text.html_safe, class: "full-image-caption"
+  end
+
   def parsed_content(content)
     paragraphs = content.split(/\n+/)
 

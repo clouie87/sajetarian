@@ -4,17 +4,33 @@
   overflow: hidden;
   position: relative;
 
-  .image-overlay {
-    @include image-overlay(500px);
+  @include media($mobile) {
+    margin: 0;
+    max-height: 280px;
   }
 
-  @include media($mobile) {
-    margin-top: 40px;
+  .image-overlay {
+    @include image-overlay(500px);
   }
 
   .component-background {
     position: relative;
     width: 100%;
+  }
+
+  .logo {
+    background-image: image-url('logo-white.png');
+    height: 100%;
+    max-width: 450px;
+    background-size: contain;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    margin: auto;
+
+    @include media($mobile) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
   }
 
   .full-image-caption {
@@ -26,7 +42,10 @@
     position: absolute;
     text-align: center;
     top: 0;
-    transform: translateY(40%);
     width: 100%;
+  }
+
+  .caption-description {
+    transform: translateY(40%);
   }
 }

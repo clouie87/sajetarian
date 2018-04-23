@@ -2,7 +2,7 @@
   <figure class="<%= section.image_layout %>" data-context-name="image">
     <%= image_tag section.image, class: "component-background" %>
     <div class="image-overlay"></div>
-    <div class="full-image-caption"><%= parsed_content(section.description) %></div>
+    <%= full_image_caption(section.description) %>
   </figure>
 <% else %>
   <div class="image-layout">
