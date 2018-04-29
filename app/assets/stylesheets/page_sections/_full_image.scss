@@ -10,6 +10,8 @@
   @include media($mobile) {
     margin: 0;
     max-height: 280px;
+    left: 0;
+    right: 0;
   }
 
   .image-overlay {
