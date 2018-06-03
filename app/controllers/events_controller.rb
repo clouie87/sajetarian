@@ -1,6 +1,13 @@
 class EventsController < ActionController::Base
   def index
-    @events = Event.all
+    if params[:month].present?
+      time = Time.now
+      month = Date.new(time.year, params[:month].to_i)
+      @events = Event.all.where("starts_at > ?", month)
+    else
+      @events = Event.all
+    end
+
   end
 
   def todays_events

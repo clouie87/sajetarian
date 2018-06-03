@@ -6,7 +6,7 @@ function initMap(events = []) {
 
   $.ajax({
     dataType: "json",
-    url: 'events.json',
+    url: 'events.json?month=' + new Date().getMonth(),
     success: function(data) {
       $(data).map(function() {
         if(this.lat != null && this.lng != null) {
@@ -22,7 +22,6 @@ function initMap(events = []) {
       if (results.length > 0) {
         map.setCenter(results[0]);
         var markers = results.map(function(location, i) {
-
           return new google.maps.Marker({
             position: location,
             label: labels[i % labels.length],
