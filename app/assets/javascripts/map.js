@@ -1,3 +1,5 @@
+Map.store =  {};
+
 function initMap(events = []) {
   var results = [];
   var new_data = [];
@@ -8,28 +10,47 @@ function initMap(events = []) {
     dataType: "json",
     url: 'events.json?month=' + new Date().getMonth(),
     success: function(data) {
-      $(data).map(function() {
-        if(this.lat != null && this.lng != null) {
-          results.push({ lat: this.lat, lng: this.lng })
-        }
-        return results
-      });
-
       var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 12,
       });
 
-      if (results.length > 0) {
-        map.setCenter(results[0]);
-        var markers = results.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-            map: map
-          });
+      if ($(data).length > 0) {
+        Map.store.markers = $(data).map(function(i, eventInfo) {
+          if(eventInfo.lat != null && eventInfo.lng != null) {
+            marker = new google.maps.Marker({
+              position: { lat: eventInfo.lat, lng: eventInfo.lng },
+              label: labels[i % labels.length],
+              id: eventInfo.id,
+              map: map
+            });
+
+            var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var humanDate = new Date(eventInfo.start).toLocaleDateString("en-US", dateOptions);
+            if (humanDate == new Date().toLocaleDateString("en-US", dateOptions)) {
+              humanDate = "Today";
+            };
+
+            var contentString = '<div id="content">' +
+                                '<p class="map-info-date">' + humanDate + '</p>' +
+                                '<p>Where: ' + eventInfo.address + '</p>' +
+                                '<p>Times: ' + eventInfo.starts_at + '-' + eventInfo.ends_at + '</p>' +
+                                '</div>';
+
+
+            marker['infowindow'] = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            if (humanDate == "Today") {
+              marker['infowindow'].open(map, marker);
+            }
+
+            return marker;
+          }
+
+          return Map.store.markers
         });
 
-        return markers
       } else {
         map.setCenter(home);
         var marker = new google.maps.Marker({
@@ -37,6 +58,8 @@ function initMap(events = []) {
           map: map
         });
       }
+
+      map.setCenter(Map.store.markers[0].position);
     }
   })
 }
