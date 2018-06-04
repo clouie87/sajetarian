@@ -11,6 +11,10 @@
     }
   }
 
+  .fc-content {
+    cursor: pointer;
+  }
+
   .fc-widget-header table {
     margin: 0;
     font-size: $calendar-font-size;
