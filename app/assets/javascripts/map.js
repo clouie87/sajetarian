@@ -14,6 +14,8 @@ function initMap(events = []) {
         zoom: 12,
       });
 
+      map.setCenter(home);
+
       if ($(data).length > 0) {
         Map.store.markers = $(data).map(function(i, eventInfo) {
           if(eventInfo.lat != null && eventInfo.lng != null) {
@@ -43,6 +45,7 @@ function initMap(events = []) {
 
             if (humanDate == "Today") {
               marker['infowindow'].open(map, marker);
+              map.setCenter(marker.position);
             }
 
             return marker;
@@ -52,14 +55,11 @@ function initMap(events = []) {
         });
 
       } else {
-        map.setCenter(home);
         var marker = new google.maps.Marker({
           position: home,
           map: map
         });
       }
-
-      map.setCenter(Map.store.markers[0].position);
     }
   })
 }
