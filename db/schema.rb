@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319042141) do
+ActiveRecord::Schema.define(version: 20180629022940) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -87,10 +87,10 @@ ActiveRecord::Schema.define(version: 20180319042141) do
   create_table "menu_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "price"
+    t.decimal  "price",       precision: 10, scale: 2
     t.integer  "tag"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "ancestry"
     t.index ["ancestry"], name: "index_menu_items_on_ancestry", using: :btree
   end
