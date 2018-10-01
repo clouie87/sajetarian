@@ -1,4 +1,5 @@
 json.id event.id
+json.name event.name
 json.starts_date event.start_date
 json.start event.starts_at
 json.starts_at event.start_time

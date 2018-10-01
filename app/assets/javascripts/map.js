@@ -32,7 +32,10 @@ function initMap(events = []) {
               humanDate = "Today";
             };
 
+            var eventName = eventInfo.name || ""
+
             var contentString = '<div id="content">' +
+                                '<p class="event-name">' + eventName + '</p>' +
                                 '<p class="map-info-date">' + humanDate + '</p>' +
                                 '<p>Where: ' + eventInfo.address + '</p>' +
                                 '<p>Times: ' + eventInfo.starts_at + '-' + eventInfo.ends_at + '</p>' +
