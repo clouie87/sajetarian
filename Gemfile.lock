@@ -17,9 +17,9 @@ GIT
 
 GIT
   remote: git://github.com/alexreisner/geocoder.git
-  revision: cf37a716530fb7e7dba5546f64e08ed867442263
+  revision: 1c4db14ab909e92f6f8e566afcd4e612e209da20
   specs:
-    geocoder (1.4.5)
+    geocoder (1.5.0)
 
 GIT
   remote: https://github.com/plataformatec/devise
