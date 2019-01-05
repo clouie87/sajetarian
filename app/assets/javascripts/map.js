@@ -8,7 +8,7 @@ function initMap(events = []) {
 
   $.ajax({
     dataType: "json",
-    url: 'events.json?month=' + new Date().getMonth(),
+    url: 'events.json?month=' + (new Date().getMonth() + 1),
     success: function(data) {
       var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 12,
