@@ -61,5 +61,9 @@
     @include span-columns(12);
     margin: 5px;
     text-align: center;
+
+    p {
+      margin: auto;
+    }
   }
 }
